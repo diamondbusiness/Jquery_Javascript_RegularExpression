@@ -1,0 +1,39 @@
+.container {
+    padding: 20px;
+    background-color: greenyellow;
+    margin: 50px auto; 
+    border: 2px solid green; 
+    width: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+}
+
+.heading h2{
+    margin: 0;
+}
+
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+
+td {
+    padding: 10px; 
+    border: 1px solid green; 
+}
+
+
+.label {
+    width: 33%;
+    text-align: right;
+    color: blue;
+    font-weight: bold; 
+}
+
+.error-message {
+    color: red; 
+    display: none; 
+}
+ 

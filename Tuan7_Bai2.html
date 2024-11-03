@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/T7_Bai2.css">
+    <style>
+        td {
+            padding: 0;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img class="banner-car" src="./images/banner_car.jpg" alt="Banner Car">
+    </header>
+
+    <main>
+        <div style="display: flex; align-items: flex-start;">
+            <table class="table text-center table-left">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2" class="heading">Bảng tin thị trường</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="height: 30px;">
+                        <th class="header" scope="row" colspan="2">Vàng</th>
+                    </tr>
+                    <tr style="height: 30px;">
+                        <th class="label">Mua vào</th>
+                        <th class="label">Bán ra</th>
+                    </tr>
+                    <tr style="height: 30px; text-align: center;">
+                        <td class="label vang-mua"></td>
+                        <td class="label vang-ban"></td>
+                    </tr>
+                    <tr style="height: 30px;">
+                        <th class="header" scope="row" colspan="2">USD</th>
+                    </tr>
+                    <tr style="height: 30px;">
+                        <th class="label">Mua vào</th>
+                        <th class="label">Bán ra</th>
+                    </tr>
+                    <tr style="height: 30px;text-align: center;">
+                        <td class="label usd-mua"></td>
+                        <td class="label usd-ban"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3" class="heading">Cập nhật giá thị trường</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" colspan="1">Mua vào</td>
+                        <td colspan="2"><input type="text" class="mVao1"></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" colspan="1">Bán ra</td>
+                        <td colspan="2" class="banRa"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" colspan="1">Loại xe</td>
+                        <td colspan="1">
+                            <select name="cars" id="cars">
+                                <option value="./images/car1.jpg;35000">Toyota</option>
+                                <option value="./images/car2.jpg;15000">KIA</option>
+                                <option value="./images/car3.jpg;40000">Ford</option>
+                                <option value="./images/car4.jpg;32000">Civic</option>
+                                <option value="./images/car5.jpg;50000">Ferrari</option>
+                                <option value="./images/car7.jpg;45000">Mercedes</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row" colspan="1"></td>
+                        <td colspan="2">
+                            <div class="radio-group">
+                                <input class="radio" type="radio" id="gold" name="currency" value="1">
+                                <label for="gold">Vàng</label>
+                                <input class="radio" type="radio" id="usd" name="currency" value="0">
+                                <label for="usd">USD</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td scope="row" colspan="1"></td>
+                        <td colspan="2">
+                            <div class="button-group">
+                                <button>Update</button>
+                                <button>State</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3" class="heading">Bảng báo giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3" style="background-color: #fff; text-align: left;">
+                            <p class="header">- Với kiểu dáng thể thao, sang trọng</p>
+                            <p class="header">- Nổi bật, ít tốn nhiên liệu</p>
+                            <p class="header">- Kiểu dáng thể thao</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">
+                            <div id="carDisplay">
+                              <img src="./images/car1.jpg" width="75%" height="200px" alt="Car Image" style="border: 1px solid #ccc;"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="price" style="font-weight: bold; text-align: left; color: green; background-color: #fff;">
+                            <div id="carPrice">GIÁ: 35000</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./js/tuan7_bai2.js"></script>
+</body>
+</html>

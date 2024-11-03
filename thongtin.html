@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Đăng Ký</title>
+    <link rel="stylesheet" href="./css/T7_Bai3.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Thông Tin Đăng Ký</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><strong>Họ và Tên:</strong></td>
+                        <td id="fullname-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tên Đăng Nhập:</strong></td>
+                        <td id="username-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mật Khẩu:</strong></td>
+                        <td id="password-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ngày Sinh:</strong></td>
+                        <td id="birthdate-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Điện Thoại:</strong></td>
+                        <td id="phone-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Địa Chỉ:</strong></td>
+                        <td id="address-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email:</strong></td>
+                        <td id="email-display"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sở Thích:</strong></td>
+                        <td id="interests-display"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="goBack()">Quay lại</button>
+        </div>
+    </main>
+
+    <script>
+        function displayInfo() {
+            const params = new URLSearchParams(window.location.search);
+        document.getElementById("fullname-display").innerText = params.get('fullname') || '';
+        document.getElementById("username-display").innerText = params.get('username') || '';
+        document.getElementById("password-display").innerText = '********'; // For security
+        document.getElementById("birthdate-display").innerText = `${params.get('day')}/${params.get('month')}/${params.get('year')}` || '';
+        document.getElementById("phone-display").innerText = params.get('phone') || '';
+        document.getElementById("address-display").innerText = params.get('address') || '';
+        document.getElementById("email-display").innerText = params.get('email') || '';
+        document.getElementById("interests-display").innerText = params.get('interests') || '';
+        }
+
+        function goBack() {
+            window.history.back(); 
+        }
+
+        // Call the function to display info on page load
+        window.onload = displayInfo;
+    </script>
+</body>
+</html>
