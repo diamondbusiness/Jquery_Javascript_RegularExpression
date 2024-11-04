@@ -1,0 +1,48 @@
+.container {
+    margin-left: 100px;
+}
+
+.heading, .description {
+    font-weight: 600;
+}
+
+body {
+    height: 100vh; 
+    margin: 0; 
+}
+
+
+.form {
+    width: 25%;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input {
+    height: 30px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.form-text {
+    height: 30px;
+}
+
+.submit {
+    display: block;
+    color: white;
+    height: 30px;
+    margin-top: 20px;
+    width: 200px;
+    background-color: green;
+}
+
+.error-message {
+    display: block;
+    margin-top: 2px;
+    color: red;
+    display: none;
+}
