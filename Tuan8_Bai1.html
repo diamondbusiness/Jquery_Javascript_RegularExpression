@@ -20,7 +20,7 @@
 <body>
     <main>
         <div class="container"> 
-          <form onsubmit="return validateForm()" method="get">
+        <form onsubmit="return validateForm()" method="get">
           <table class="table">
             <tbody>
                 <thead>
@@ -124,8 +124,8 @@
                 <tr>
                     <td class="label"><label for="email">Email:</label></td>
                     <td colspan="2">
-                        <input type="text" id="email" name="email">
-                        <span id="email-error" class="error-message">Email không đúng định dạng.</span>
+                        <input type="email" id="email" name="email">
+                        <span id="email-error"  class="error-message">Email không đúng định dạng.</span>
                     </td>
                 </tr>
                 
@@ -133,7 +133,7 @@
                 <tr>
                     <td class="label"><label for="phone">Điện thoại:</label></td>
                     <td colspan="2">
-                        <input type="text" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone">
                         <span id="phone-error" class="error-message">Điện thoại phải là số.</span>
                     </td>
                 </tr>
@@ -147,11 +147,11 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
-    </form>
+          </table>
+        </form>
 </div>
     </main>
-    <script src="./js/Tuan7_bai3.js">
+    <script src="./js/Tuan8_Bai1.js">
 
     </script>
 </body>
