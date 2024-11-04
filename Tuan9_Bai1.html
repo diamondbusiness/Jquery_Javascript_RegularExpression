@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Kỳ Quân Đội Hè</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header class="mb-4">
+            <img src="./images/website.png" alt="Header" style="width: 100%; height: 400px;">
+            <div style="margin: 10px 0 0 10px">
+                <a href="#!">Trang Chủ</a>
+                <a href="#!" style="margin-left: 10px;" data-toggle="modal" data-target="#registrationModal">Đăng ký</a>
+            </div>
+
+            <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registrationModalLabel">THÔNG TIN HỌC VIÊN</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="return validateForm()">
+                                <div class="form-group">
+                                    <label for="fullName">Họ và tên</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
+                                    <span id="fullname-error" class="error-message">Họ và tên không được để trống và phải từ 2 từ trở lên, mỗi từ viết hoa chữ cái đầu.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">Số điện thoại</label>
+                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Nhập số điện thoại">
+                                    <span id="phone-error" class="error-message">Số điện thoại không được để trống và phải đúng định dạng XXX-YYYYYY.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthDate">Ngày sinh</label>
+                                    <input type="date" class="form-control" id="birthDate">
+                                    <span id="birthdate-error" class="error-message">Ngày sinh không hợp lệ. Tuổi phải từ 15 đến 18.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Địa chỉ</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="course">Bạn muốn tham gia khóa nào?</label>
+                                    <select class="form-control" id="course">
+                                        <option value="0">Khóa 2 tuần</option>
+                                        <option value="1">Khóa 4 tuần</option>
+                                        <option value="2">Khóa 6 tuần</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fee">Học phí</label>
+                                    <input type="text" class="form-control" id="fee" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePicture">Ảnh đại diện</label>
+                                    <input type="file" class="form-control-file" id="profilePicture">
+                                    <span id="file-error" class="error-message">Vui lòng tải lên ảnh đại diện.</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" onclick="validateForm()">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ và tên</th>
+                    <th>Giới tính</th>
+                    <th>Số điện thoại</th>
+                    <th>Ngày sinh</th>
+                    <th>Địa chỉ</th>
+                    <th>Khóa học</th>
+                    <th>Học phí</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Hoàng Lâm</td>
+                    <td>Nam</td>
+                    <td>0908888888</td>
+                    <td>20/3/2010</td>
+                    <td>123 Nguyễn Du, P5, Gò Vấp, TPHCM</td>
+                    <td>5 tuần</td>
+                    <td>8,000,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/Tuan9_Bai1.js"></script>
+</body>
+</html>

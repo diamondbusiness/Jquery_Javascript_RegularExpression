@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <title>Document</title>
+    <style>
+        .container {
+            margin-left: 100px;
+        }
+
+        .heading, .description {
+            font-weight: 600;
+        }
+
+        body {
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        
+        .form {
+            width: 25%;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        .form-input {
+            height: 30px;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        .form-text {
+            height: 30px;
+        }
+
+        .submit {
+            display: block;
+            color: white;
+            height: 30px;
+            margin-top: 20px;
+            width: 200px;
+            background-color: green;
+        }
+
+        .error-message {
+            display: block;
+            margin-top: 2px;
+            color: red;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1 class="heading">
+            Đăng ký
+        </h1>
+        <p class="description">Miễn phí và sẽ luôn như vậy</p>
+        <form onsubmit="return validateForm()" class="form">
+            <div class="form-group">
+                <input  id="firstName" class="form-text" type="text" placeholder="Họ" required>
+                <input id="lastName" class="form-text" type="text" placeholder="Tên" required>
+                <span id="fullname-error"  class="error-message">Họ và tên đều bắt đầu bằng chữ hoa</span>
+            </div>
+
+            <input id="email" class="form-input" type="email" placeholder="Email đăng nhập" required>
+             <span id="email-error"  class="error-message">Email phải đúng định dạng</span>
+            <input id="confirm-email" class="form-input" type="email" placeholder="Nhập lại Email" required>
+            <span id="confirm-error"  class="error-message">Nhập lại email phải trùng khớp với email đã nhập</span>
+            <input id="password" class="form-input" type="password" placeholder="Mật khẩu" required>
+            <span id="password-error"  class="error-message">Mật khẩu phải có ký tự chữ, số và ít nhất là 6 ký tự</span>
+            <input id="birthDate" class="form-input" type="text" placeholder="Năm sinh">
+            <span id="birthday-error"  class="error-message">Năm sinh phải < 2002</span>
+            <button class="submit" type="submit">Đăng ký</button>
+       </form>
+    </main>
+    <script src="./js/Tuan8_Bai1b.js"></script>
+</body>
+</html>

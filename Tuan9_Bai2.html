@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Kỳ Quân Đội Hè</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        .button {
+            color: white;
+            width: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header class="mb-4">
+            <img src="./images/banner-5.png" alt="Header" style="width: 100%; height: 400px;">
+            <div style="margin: 10px 0 0 10px">
+                <a href="#!">Đăng nhập</a>
+                <a href="#!" style="margin-left: 10px;" data-toggle="modal" data-target="#registrationModal">Mở tour mới</a>
+            </div>
+
+            <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registrationModalLabel">THÔNG TIN TOUR<blockquote class="blockquote text-center">
+                                <p class="mb-0"></p>
+                            </blockquote></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="return validateForm()">
+                                <div class="form-group">
+                                    <label for="tourCode">Mã tour</label>
+                                    <input type="text" class="form-control" id="tourCode" placeholder="Nhập mã tour...">
+                                    <span id="tourCode-error" class="error-message">Họ và tên không được để trống và phải từ 2 từ trở lên, mỗi từ viết hoa chữ cái đầu.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="trip">Hành trình</label>
+                                    <input type="text" class="form-control" id="trip" placeholder="Nhập hành trình...">
+                                    <span id="trip-error" class="error-message">Họ và tên không được để trống và phải từ 2 từ trở lên, mỗi từ viết hoa chữ cái đầu.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tourDate">Ngày khỏi hành</label>
+                                    <input type="date" class="form-control" id="tourDate" placeholder="Nhập số điện thoại">
+                                    <span id="tourDate-error" class="error-message">Số điện thoại không được để trống và phải đúng định dạng XXX-YYYYYY.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tourTime">Thời gian</label>
+                                    <input type="text" class="form-control" id="tourTime">
+                                    <span id="tourTime-error" class="error-message">Ngày sinh không hợp lệ. Tuổi phải từ 15 đến 18.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tourPrice">Gía Tour</label>
+                                    <input type="text" class="form-control" id="tourPrice" placeholder="Nhập giá Tour">
+                                    <span id="tourPrice-error" class="error-message">Ngày sinh không hợp lệ. Tuổi phải từ 15 đến 18.</span>
+                                </div>
+                           
+                                <div class="form-group">
+                                    <label for="profilePicture">Ảnh đại diện</label>
+                                    <input type="file" class="form-control-file" id="profilePicture">
+                                    <span id="file-error" class="error-message">Vui lòng tải lên ảnh đại diện.</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="button" type="button" class="btn btn-success" onclick="validateForm()">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Tour</th>
+                    <th>Hành Trình</th>
+                    <th>Ngày khởi hành</th>
+                    <th>Thời gian</th>
+                    <th>Gia Tour</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>AAA-AAA-02-2024</td>
+                    <td>Hà Nội - Huế - Đà Nẵng 5 ngày 4 đêm</td>
+                    <td>06/08/2018</td>
+                    <td>5 ngày 4 đêm</td>
+                    <td>10000000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/Tuan9_Bai2.js"></script>
+</body>
+</html>
